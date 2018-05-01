@@ -85,6 +85,8 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between; }
+    main section .tableview-header {
+      display: none; }
     main section .item {
       display: flex;
       flex-direction: row;
@@ -142,7 +144,7 @@ main {
           font-size: 20px; }
       main section .item .item-tip-after {
         padding-right: 20px; }
-      main section .item .item-tip-after.platinum:before, main section .item .item-tip-after.silver:before, main section .item .item-tip-after.gold:before, main section .item .item-tip-after.bronze:before {
+      main section .item .item-tip-after.platinum:before, main section .item .item-tip-after.silver:before, main section .item .item-tip-after.gold:before, main section .item .item-tip-after.bronze:before, main section.tableView .item .item-tip-after.silver:before, main section.tableView .item .item-tip-after.gold:before, main section.tableView .item .item-tip-after.bronze:before {
         content: "";
         border-radius: 50%;
         background-color: #999999;
@@ -158,7 +160,7 @@ main {
         background-color: #ab6340; }
       main section .item .item-tip-before {
         padding-left: 20px; }
-      main section .item .item-tip-after:after, main section .item .item-tip-before:before {
+      main section .item .item-tip-after:after, main section .item .item-tip-before:before, main section.tableView .item .item-tip-before:before {
         content: "";
         position: absolute;
         right: 0px;
@@ -167,7 +169,7 @@ main {
         background: url("img/info-icon.png") no-repeat 100% 100%; }
       main section .item .item-tip-before:before {
         left: 0px; }
-      main section .item .item-overview, main section .item .item-buy {
+      main section .item .item-overview, main section .item .item-buy, main section.tableView .item .item-buy {
         flex: 1 1 50%;
         color: #2985f7;
         font-size: 12px;
@@ -182,6 +184,145 @@ main {
         background-color: #2985f7;
         margin: 0px -30px 0px 0px;
         border: none; }
+  main section.tableView {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: -5px 0px 70px; }
+    main section.tableView .tableview-header {
+      display: flex;
+      flex: 0 1 100%;
+      text-transform: uppercase;
+      width: 85%;
+      white-space: pre-wrap; }
+      main section.tableView .tableview-header p {
+        flex: 0 1 11.5%;
+        font-size: 10px;
+        color: #1c1b1a;
+        letter-spacing: 0.1em;
+        opacity: 0.4; }
+        main section.tableView .tableview-header p:first-child {
+          margin-right: 60px; }
+        main section.tableView .tableview-header p.text-center {
+          text-align: center; }
+    main section.tableView .item {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      border: none;
+      border-bottom: 1px solid rgba(28, 27, 26, 0.1);
+      width: 100%;
+      border-radius: 2px;
+      padding: 25px 0px 0px;
+      color: #1c1b1a;
+      flex: 0 1 100%;
+      margin-bottom: 0px; }
+      main section.tableView .item:last-child {
+        margin-right: 0px; }
+      main section.tableView .item img {
+        width: 40px;
+        height: 40px;
+        flex: 0 1 2%;
+        margin-bottom: 18px; }
+      main section.tableView .item .item-header {
+        flex: 0 1 11.5%;
+        padding: 7px 0px 0px 15px; }
+        main section.tableView .item .item-header h3 {
+          font-size: 14px;
+          padding-bottom: 7px; }
+        main section.tableView .item .item-header .item-gray-star {
+          align-self: flex-start;
+          background: url("img/star-gray.png") repeat;
+          height: 16px;
+          width: 80px;
+          transform: scale(0.8);
+          margin-left: -10px; }
+          main section.tableView .item .item-header .item-gray-star .item-gold-star {
+            background: url("img/star-gold.png") repeat;
+            height: 16px; }
+            main section.tableView .item .item-header .item-gray-star .item-gold-star.full {
+              width: 100%; }
+            main section.tableView .item .item-header .item-gray-star .item-gold-star.three {
+              width: 60%; }
+            main section.tableView .item .item-header .item-gray-star .item-gold-star.four {
+              width: 80%; }
+      main section.tableView .item .item-detail-name {
+        display: none; }
+      main section.tableView .item p {
+        flex: 0 1 10%;
+        padding: 13px 0px;
+        position: relative;
+        border-bottom: none; }
+      main section.tableView .item .item-price {
+        flex: 0 1 9.6%;
+        font-size: 14px;
+        letter-spacing: 0em;
+        font-weight: normal;
+        text-align: center;
+        padding: 13px 30px 0px 0px;
+        border-bottom: none; }
+        main section.tableView .item .item-price span {
+          font-size: 14px; }
+      main section.tableView .item .item-tip-after {
+        padding-right: 0px; }
+      main section.tableView .item .item-tip-after:after, main section.tableView .item .item-tip-before:before {
+        content: "";
+        position: absolute;
+        left: 35px;
+        width: 15px;
+        height: 15px;
+        background: url("img/info-icon.png") no-repeat 100% 100%; }
+      main section.tableView .item .item-tip-after.platinum:after, main section.tableView .item .platinum.item-tip-before:before {
+        left: 65px; }
+      main section.tableView .item .text-center {
+        text-align: center;
+        padding-right: 10px; }
+      main section.tableView .item .item-tip-after.gold:after, main section.tableView .item .gold.item-tip-before:before,
+      main section.tableView .item .item-tip-after.silver:after,
+      main section.tableView .item .silver.item-tip-before:before {
+        left: 40px; }
+      main section.tableView .item .item-tip-after.bronze:after, main section.tableView .item .bronze.item-tip-before:before {
+        left: 50px; }
+      main section.tableView .item .item-tip-after.platinum:before, main section.tableView .item .item-tip-after.silver:before, main section.tableView .item .item-tip-after.gold:before, main section.tableView .item .item-tip-after.bronze:before {
+        content: "";
+        border-radius: 50%;
+        background-color: #999999;
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        left: -18px; }
+      main section.tableView .item .item-tip-after.silver:before {
+        background-color: #adc1c4; }
+      main section.tableView .item .item-tip-after.gold:before {
+        background-color: #edac5b; }
+      main section.tableView .item .item-tip-after.bronze:before {
+        background-color: #ab6340; }
+      main section.tableView .item .item-tip-before {
+        padding-left: 20px; }
+      main section.tableView .item .item-tip-before:before {
+        left: 0px; }
+      main section.tableView .item .item-overview, main section.tableView .item .item-buy {
+        flex: 0 1 auto;
+        color: #2985f7;
+        font-size: 10px;
+        font-weight: normal;
+        letter-spacing: 0.07em;
+        padding: 8px 0px;
+        margin: 0px;
+        text-align: center;
+        border: 1px solid rgba(28, 27, 26, 0.1);
+        height: 30px;
+        border-radius: 4px;
+        width: 109px;
+        margin-top: 7px; }
+      main section.tableView .item .item-buy {
+        color: #ffffff;
+        background-color: #2985f7;
+        border: none;
+        width: 68px;
+        margin-left: 5px; }
 
 footer {
   display: flex;
@@ -215,7 +356,7 @@ footer {
       main section .item img {
         width: 45px;
         height: 45px; }
-      main section .item .item-overview, main section .item .item-buy {
+      main section .item .item-overview, main section .item .item-buy, main section.tableView .item .item-buy {
         margin: 0px 0px 0px -15px; }
       main section .item .item-buy {
         margin: 0px -15px 0px 0px; } }
