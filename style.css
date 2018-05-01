@@ -32,6 +32,8 @@ header {
           header nav ul li a.active {
             opacity: 1;
             border-bottom: 2px solid #2985f7; }
+    header nav .mobile-menu {
+      display: none; }
 
 main {
   padding: 45px 120px 0px 120px;
@@ -200,6 +202,142 @@ footer {
     footer a:hover {
       opacity: 1; }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  header {
+    padding: 0px 50px; }
+
+  main {
+    padding: 45px 50px 0px; }
+    main:after {
+      width: calc(100% - 100px); }
+    main section .item {
+      padding: 15px 15px 0px; }
+      main section .item img {
+        width: 45px;
+        height: 45px; }
+      main section .item .item-overview, main section .item .item-buy {
+        margin: 0px 0px 0px -15px; }
+      main section .item .item-buy {
+        margin: 0px -15px 0px 0px; } }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  header {
+    justify-content: space-between;
+    padding: 0px 62px; }
+    header nav ul {
+      display: none; }
+    header nav ul.mobile-menu.opened {
+      display: block;
+      width: 200px;
+      background-color: #ffffff;
+      padding: 15px;
+      border: 1px solid rgba(28, 27, 26, 0.1);
+      flex-direction: column;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      height: auto;
+      z-index: 999 !important;
+      position: absolute;
+      top: 50px;
+      right: 10%; }
+      header nav ul.mobile-menu.opened li {
+        margin-right: 0px; }
+    header nav .mobile-menu.mm-btn {
+      display: block;
+      cursor: pointer;
+      background: url("img/butger.png") no-repeat 100% 100%;
+      height: 16px;
+      width: 21px;
+      padding: 0px;
+      border: none;
+      margin-left: auto; }
+      header nav .mobile-menu.mm-btn li {
+        display: none; }
+
+  main {
+    padding: 45px 62px 0px; }
+    main:after {
+      width: calc(100% - 124px); }
+    main .title #table, main .title #card, main .title #table {
+      display: none; }
+    main section {
+      justify-content: space-around; }
+      main section .item {
+        flex: 0 1 44%; }
+        main section .item .item-price {
+          padding: 30px 0px 35px; }
+
+  footer {
+    padding: 30px 0px 0px 60px; }
+    footer a {
+      display: none; } }
+@media screen and (max-width: 767px) {
+  header {
+    justify-content: space-between;
+    padding: 0px calc((100% - 375px)/2); }
+    header img {
+      margin: 28px 0px 28px 0px; }
+    header nav ul {
+      display: none; }
+    header nav ul.mobile-menu.opened {
+      display: block;
+      width: 200px;
+      background-color: #ffffff;
+      padding: 15px;
+      border: 1px solid rgba(28, 27, 26, 0.1);
+      flex-direction: column;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      height: auto;
+      z-index: 999 !important;
+      position: absolute;
+      top: 50px;
+      right: 120px; }
+      header nav ul.mobile-menu.opened li {
+        margin-right: 0px; }
+    header nav .mobile-menu.mm-btn {
+      display: block;
+      cursor: pointer;
+      background: url("img/butger.png") no-repeat 100% 100%;
+      height: 16px;
+      width: 21px;
+      padding: 0px;
+      border: none;
+      margin-left: auto; }
+      header nav .mobile-menu.mm-btn li {
+        display: none; }
+
+  main {
+    max-width: 375px;
+    margin: 0 auto;
+    padding: 45px 0px;
+    text-align: center; }
+    main:after {
+      width: calc(100% - 50px); }
+    main .title #table, main .title #card, main .title #table {
+      display: none; }
+    main .title h1 {
+      width: 100%; }
+    main section {
+      justify-content: space-around; }
+      main section .item {
+        flex: 0 1 75%; }
+        main section .item .item-header {
+          padding: 8px 0px 0px 7px; }
+          main section .item .item-header h3 {
+            text-align: left; }
+        main section .item p {
+          text-align: left; }
+        main section .item .item-price {
+          padding: 30px 0px 35px; }
+
+  footer {
+    padding: 30px 0px; }
+    footer a {
+      display: none; }
+    footer p {
+      max-width: 375px;
+      margin: 0 auto;
+      text-align: center; } }
 body {
   font-family: Open Sans, sans-serif;
   font-size: 14px; }

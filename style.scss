@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
 @import "sass/helpers/variables";
-@import "sass/helpers/placeholders";
 @import "sass/helpers/mixins";
 @import "sass/layout/navbar";
 @import "sass/layout/main";
 @import "sass/layout/footer";
-//@import "sass/layout/media";
+@import "sass/layout/media";
 
 body {
 	font-family: Open Sans, sans-serif;

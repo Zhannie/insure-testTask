@@ -1,85 +1,229 @@
-//tablet
+//<1200
+@media #{$mediam} {
+	header {
+		padding: 0px 50px;
+	}
 
-@media #{$mediat} {
-	#works h2 {
-		padding: 50px 30px 50px 5px;
-		font-size: 35px;
-	}
-	div.works {
-		height: 50vh;
-			p {
-				font-size: 20px;
+	main {
+		padding: 45px 50px 0px;
+
+		&:after {
+			width: calc(100% - 100px);
+		}
+
+		section {
+			.item {
+				padding: 15px 15px 0px;
+
+				img {
+					width: 45px;
+					height: 45px;
+				}
+
+				.item-overview {
+					margin: 0px 0px 0px -15px;
+				}
+				.item-buy {
+					margin: 0px -15px 0px 0px;
+				}
+				
 			}
+		}
 	}
-	h3{
-		margin-top: 10%;
+}
+
+//tablet
+@media #{$medias} {
+
+	header {
+		justify-content: space-between;
+		padding: 0px 62px;
+		nav {
+			ul {
+				display: none;
+			}
+
+			ul.mobile-menu.opened {
+					display: block;
+					width: 200px;
+					background-color: #ffffff;
+					padding: 15px;
+					border: 1px solid $line-color;
+					flex-direction: column;
+					justify-content: space-around;
+					flex-wrap: wrap;
+					height: auto;
+					z-index: 999!important;
+					position: absolute;
+					top: 50px;
+					right: 10%;
+
+					li {
+						margin-right: 0px;
+					}
+				}
+
+			.mobile-menu.mm-btn {
+					display: block;
+					cursor: pointer;
+					background: $mmenu;
+					height: 16px;
+					width: 21px;
+					padding: 0px;
+					border: none;
+					margin-left: auto;
+
+					li {
+						display: none;
+					}
+				}
+		}
 	}
-	.left p:before {
-		border-right: 315px solid rgba(174,169,201, .3);
+
+	main {
+		padding: 45px 62px 0px;
+
+		&:after {
+			width: calc(100% - 124px);
+		}
+		.title {
+			#table, #card {
+				display: none;
+			}
+		}
+
+		section {
+			justify-content: space-around;
+			.item {
+				flex: 0 1 44%;
+
+				.item-price {
+					padding: 30px 0px 35px;
+				}
+			}
+		}
+	
 	}
-	.right p:before{
-		top: -85px;
-		border-left: 310px solid rgba(174,169,201, .3);
-		z-index: -10;
+
+	footer {
+		padding: 30px 0px 0px 60px;
+
+		a {
+			display: none;
+		}
 	}
+	
 }
 
 
 
 //mobile
-@media #{$mediam} {
-	nav {
-		padding-right: 20px;
-	}
-	.navpic {
-		max-height: 90px;
-		padding: 20px;
-	}
-	
-	.left, .right {
-		float: none;
-		width: 100%;
-		text-align: center;
-	}	
-	#works h2 {
-		padding: 40px 10px;
-		text-align: left;
-		@include fontpar (30px, 600);
-	}
-	div.works {
-		display: block;
-		height: 60vh;
-		margin: 50px auto 20px;
-			img.mob {
-				margin: 0px 0px -15px -70px; 
+@media #{$mediaxs} {
+	header {
+		justify-content: space-between;
+		padding: 0px calc((100% - 375px)/2);
+		img {
+			margin: 28px 0px 28px 0px;
+		}
+		nav {
+			ul {
+				display: none;
 			}
-			p {
-				text-align: center;
-			}
+
+			ul.mobile-menu.opened {
+					display: block;
+					width: 200px;
+					background-color: #ffffff;
+					padding: 15px;
+					border: 1px solid $line-color;
+					flex-direction: column;
+					justify-content: space-around;
+					flex-wrap: wrap;
+					height: auto;
+					z-index: 999!important;
+					position: absolute;
+					top: 50px;
+					right: 120px;
+
+					li {
+						margin-right: 0px;
+					}
+				}
+
+			.mobile-menu.mm-btn {
+					display: block;
+					cursor: pointer;
+					background: $mmenu;
+					height: 16px;
+					width: 21px;
+					padding: 0px;
+					border: none;
+					margin-left: auto;
+
+					li {
+						display: none;
+					}
+				}
+		}
 	}
 
-	div.full {
-		display: none;
+	main {
+		max-width: 375px;
+		margin: 0 auto;
+		padding: 45px 0px;
+		text-align: center;
+
+		&:after {
+			width: calc(100% - 50px);
+		}
+
+		.title {
+			#table, #card {
+				display: none;
+			}
+
+			h1 {
+				width: 100%;
+			}
+		}
+
+		section {
+			justify-content: space-around;
+			.item {
+				flex: 0 1 75%;
+
+				.item-header {
+					padding: 8px 0px 0px 7px;
+					h3 {
+						text-align: left;
+					}
+				}
+
+				p {
+					text-align: left;
+				}
+
+				.item-price {
+					padding: 30px 0px 35px;
+				}
+			}
+		}
+	}
+
+	footer {
+		padding: 30px 0px;
+
+		a {
+			display: none;
+		}
+
+		p {
+			max-width: 375px; 
+			margin: 0 auto;
+			text-align: center;
+		}
 	}
 	
-	h3 {
-		margin-top: 5%;
-		text-align: center;
-	}
-	.left p:before{
-		display: none;
-	}
-	.right p:before{
-		display: none;
-	}
-	
-	.left:not(.limg), .left:not(.limg) p{
-		text-align: center;
-	}
-	.limg, .rimg {
-		clear: both;
-		text-align: center;
-	}
 }
 
 	
