@@ -77,6 +77,7 @@ main {
 			img {
 				flex: 0 1 25%;
 				margin-bottom: 18px;
+				max-width: 55px;
 			}
 
 			.item-header {
@@ -215,7 +216,6 @@ main {
 		margin: -5px 0px 70px;
 		.tableview-header {
 			display: flex;
-			//justify-content: space-between;
 			flex: 0 1 100%;
 			text-transform: uppercase;
 			width: 85%;
