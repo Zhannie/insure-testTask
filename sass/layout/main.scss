@@ -1,5 +1,5 @@
 main {
-	padding: 45px 120px 45px 120px;
+	padding: 45px 120px 0px 120px;
 	position: relative;
 
 	&:after {
@@ -65,6 +65,7 @@ main {
 			padding: 30px 30px 0px;
 			color: #1c1b1a;
 			flex: 0 0 23.5%;
+			margin-bottom: 40px;
 
 			&:last-child {
 				margin-right: 0px;
@@ -92,6 +93,16 @@ main {
 					.item-gold-star {
 						background: $gold;
 						height: 16px;
+
+						&.full {
+							width: 100%;
+						}
+						&.three {
+							width: 60%;
+						}
+						&.four {
+							width: 80%;
+						}
 					}
 				}
 			}
@@ -127,6 +138,32 @@ main {
 			.item-tip-after {
 				padding-right: 20px;
 			}
+
+			.item-tip-after.platinum:before {
+				content: "";
+				border-radius: 50%;
+				background-color: #999999;
+				width: 14px;
+				height: 14px;
+				position: absolute;
+				left: -18px;
+			}
+
+			.item-tip-after.silver:before {
+				@extend .item-tip-after.platinum;
+				background-color: #adc1c4;
+			}
+
+			.item-tip-after.gold:before {
+				@extend .item-tip-after.platinum;
+				background-color: #edac5b;
+			}
+
+			.item-tip-after.bronze:before {
+				@extend .item-tip-after.platinum;
+				background-color: #ab6340;
+			}
+		
 
 			.item-tip-before {
 				padding-left: 20px;

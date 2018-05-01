@@ -34,7 +34,7 @@ header {
             border-bottom: 2px solid #2985f7; }
 
 main {
-  padding: 45px 120px 45px 120px;
+  padding: 45px 120px 0px 120px;
   position: relative; }
   main:after {
     content: "";
@@ -93,7 +93,8 @@ main {
       border-radius: 2px;
       padding: 30px 30px 0px;
       color: #1c1b1a;
-      flex: 0 0 23.5%; }
+      flex: 0 0 23.5%;
+      margin-bottom: 40px; }
       main section .item:last-child {
         margin-right: 0px; }
       main section .item img {
@@ -113,6 +114,12 @@ main {
           main section .item .item-header .item-gray-star .item-gold-star {
             background: url("img/star-gold.png") repeat;
             height: 16px; }
+            main section .item .item-header .item-gray-star .item-gold-star.full {
+              width: 100%; }
+            main section .item .item-header .item-gray-star .item-gold-star.three {
+              width: 60%; }
+            main section .item .item-header .item-gray-star .item-gold-star.four {
+              width: 80%; }
       main section .item .item-detail-name {
         flex: 1 1 50%;
         color: rgba(28, 27, 26, 0.5); }
@@ -133,6 +140,20 @@ main {
           font-size: 20px; }
       main section .item .item-tip-after {
         padding-right: 20px; }
+      main section .item .item-tip-after.platinum:before, main section .item .item-tip-after.silver:before, main section .item .item-tip-after.gold:before, main section .item .item-tip-after.bronze:before {
+        content: "";
+        border-radius: 50%;
+        background-color: #999999;
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        left: -18px; }
+      main section .item .item-tip-after.silver:before {
+        background-color: #adc1c4; }
+      main section .item .item-tip-after.gold:before {
+        background-color: #edac5b; }
+      main section .item .item-tip-after.bronze:before {
+        background-color: #ab6340; }
       main section .item .item-tip-before {
         padding-left: 20px; }
       main section .item .item-tip-after:after, main section .item .item-tip-before:before {
