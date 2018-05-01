@@ -1,0 +1,174 @@
+main {
+	padding: 45px 120px 45px 120px;
+	position: relative;
+
+	&:after {
+			content: "";
+			position: absolute;
+			top: 83px;
+			left: 0px;
+			right: 0px;
+			width: calc(100% - 240px);
+			margin: 0 auto;
+			height: 1px;
+			border-top: 1px solid $line-color;
+		}
+
+	.title {
+		margin-bottom: 53px;
+		@include flex(row, nowrap, start);
+	
+		h1 {
+			font-size: 24px;
+			display: inline-block;
+			margin-right: auto;
+			color: #1C1B1A;
+		}
+
+		#card {
+			align-self: flex-end;
+			height: 18px;
+			width: 18px;
+			border: none;
+			background: $card;
+			margin-right: 0px;
+			cursor: pointer;
+			outline: none;
+		}
+
+		#table {
+			@extend #card;
+			background: $table;
+			position: relative; 
+			margin-right: 26px;
+		
+
+			&:after {
+				content: "";
+				position: absolute;
+				top: -5px;
+				right: -13.5px;
+				width: 1px;
+				height: 30px;
+				border-right: 1px solid $line-color;
+			}
+		}
+	}
+
+	section {
+		@include flex(row, wrap, space-between);
+		.item {
+			@include flex(row, wrap, space-between);
+			width: 282px;
+			border: 1px solid $line-color;
+			border-radius: 2px;
+			padding: 30px 30px 0px;
+			color: #1c1b1a;
+			flex: 0 0 23.5%;
+
+			&:last-child {
+				margin-right: 0px;
+			}
+
+			img {
+				flex: 0 1 25%;
+				margin-bottom: 18px;
+			}
+
+			.item-header {
+				flex: 0 1 70%;
+				padding: 7px 0px 0px 5px;
+				
+				h3 {
+					font-size: 20px;
+					padding-bottom: 7px;
+				}
+				.item-gray-star {
+					align-self: flex-start;
+					background: $gray;
+					height: 16px;
+					width: 80px;
+
+					.item-gold-star {
+						background: $gold;
+						height: 16px;
+					}
+				}
+			}
+
+			
+
+			.item-detail-name {
+				flex: 1 1 50%;
+				color: rgba(28, 27, 26, 0.5);
+			}
+
+			p {
+				flex-basis: auto;
+				padding: 13px 0px;
+				position: relative;
+				border-bottom: 1px solid $gray-color;
+			}
+
+			.item-price {
+				flex: 1 1 100%;
+				font-size: 36px;
+				letter-spacing: 0.02em;
+				font-weight: 300;
+				text-align: center;
+				padding: 20px 0px 40px;
+				border-bottom: none;
+
+				span{
+					font-size: 20px;
+				}
+			}
+
+			.item-tip-after {
+				padding-right: 20px;
+			}
+
+			.item-tip-before {
+				padding-left: 20px;
+			}
+
+			.item-tip-after:after {
+				content: "";
+				position: absolute;
+				right: 0px;
+				width: 15px;
+				height: 15px;
+				background: $info;
+			}
+
+			.item-tip-before:before {
+				@extend .item-tip-after:after;
+				left: 0px;
+			}
+
+			.item-overview {
+				flex: 1 1 50%;
+				color: $blue-color;
+				font-size: 12px;
+				font-weight: 600;
+				letter-spacing: 0.07em;
+				padding: 11px 0px; 
+				margin: 0px 0px 0px -30px;
+				text-align: center;
+				border: 1px solid $line-color;
+			}
+
+			.item-buy {
+				@extend .item-overview;
+				color: #ffffff;
+				background-color: $blue-color;
+				margin: 0px -30px 0px 0px;
+				border: none;
+			}
+
+
+		}
+	}
+
+
+}

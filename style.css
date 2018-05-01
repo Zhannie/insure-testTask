@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600");
+header {
+  height: 70px;
+  width: 100%;
+  box-shadow: 0px 1px 4px rgba(28, 27, 26, 0.07);
+  padding: 0px 120px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: start; }
+  header img {
+    margin: 28px 315px 28px 0px; }
+  header nav {
+    padding-top: 25px; }
+    header nav ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      height: 100%; }
+      header nav ul li {
+        margin-right: 19px; }
+        header nav ul li a {
+          padding: 5px 10px;
+          display: block;
+          color: #1c1b1a;
+          text-align: center;
+          opacity: 0.5;
+          height: 100%; }
+          header nav ul li a:hover {
+            opacity: 1; }
+          header nav ul li a.active {
+            opacity: 1;
+            border-bottom: 2px solid #2985f7; }
+
+main {
+  padding: 45px 120px 45px 120px;
+  position: relative; }
+  main:after {
+    content: "";
+    position: absolute;
+    top: 83px;
+    left: 0px;
+    right: 0px;
+    width: calc(100% - 240px);
+    margin: 0 auto;
+    height: 1px;
+    border-top: 1px solid rgba(28, 27, 26, 0.1); }
+  main .title {
+    margin-bottom: 53px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start; }
+    main .title h1 {
+      font-size: 24px;
+      display: inline-block;
+      margin-right: auto;
+      color: #1C1B1A; }
+    main .title #card, main .title #table {
+      align-self: flex-end;
+      height: 18px;
+      width: 18px;
+      border: none;
+      background: url("img/cardview.png") no-repeat 100% 100%;
+      margin-right: 0px;
+      cursor: pointer;
+      outline: none; }
+    main .title #table {
+      background: url("img/tableview.png") no-repeat 100% 100%;
+      position: relative;
+      margin-right: 26px; }
+      main .title #table:after {
+        content: "";
+        position: absolute;
+        top: -5px;
+        right: -13.5px;
+        width: 1px;
+        height: 30px;
+        border-right: 1px solid rgba(28, 27, 26, 0.1); }
+  main section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    main section .item {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 282px;
+      border: 1px solid rgba(28, 27, 26, 0.1);
+      border-radius: 2px;
+      padding: 30px 30px 0px;
+      color: #1c1b1a;
+      flex: 0 0 23.5%; }
+      main section .item:last-child {
+        margin-right: 0px; }
+      main section .item img {
+        flex: 0 1 25%;
+        margin-bottom: 18px; }
+      main section .item .item-header {
+        flex: 0 1 70%;
+        padding: 7px 0px 0px 5px; }
+        main section .item .item-header h3 {
+          font-size: 20px;
+          padding-bottom: 7px; }
+        main section .item .item-header .item-gray-star {
+          align-self: flex-start;
+          background: url("img/star-gray.png") repeat;
+          height: 16px;
+          width: 80px; }
+          main section .item .item-header .item-gray-star .item-gold-star {
+            background: url("img/star-gold.png") repeat;
+            height: 16px; }
+      main section .item .item-detail-name {
+        flex: 1 1 50%;
+        color: rgba(28, 27, 26, 0.5); }
+      main section .item p {
+        flex-basis: auto;
+        padding: 13px 0px;
+        position: relative;
+        border-bottom: 1px solid rgba(28, 27, 26, 0.05); }
+      main section .item .item-price {
+        flex: 1 1 100%;
+        font-size: 36px;
+        letter-spacing: 0.02em;
+        font-weight: 300;
+        text-align: center;
+        padding: 20px 0px 40px;
+        border-bottom: none; }
+        main section .item .item-price span {
+          font-size: 20px; }
+      main section .item .item-tip-after {
+        padding-right: 20px; }
+      main section .item .item-tip-before {
+        padding-left: 20px; }
+      main section .item .item-tip-after:after, main section .item .item-tip-before:before {
+        content: "";
+        position: absolute;
+        right: 0px;
+        width: 15px;
+        height: 15px;
+        background: url("img/info-icon.png") no-repeat 100% 100%; }
+      main section .item .item-tip-before:before {
+        left: 0px; }
+      main section .item .item-overview, main section .item .item-buy {
+        flex: 1 1 50%;
+        color: #2985f7;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.07em;
+        padding: 11px 0px;
+        margin: 0px 0px 0px -30px;
+        text-align: center;
+        border: 1px solid rgba(28, 27, 26, 0.1); }
+      main section .item .item-buy {
+        color: #ffffff;
+        background-color: #2985f7;
+        margin: 0px -30px 0px 0px;
+        border: none; }
+
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: start;
+  height: 80px;
+  border: 1px solid rgba(28, 27, 26, 0.1);
+  border-radius: 2px;
+  padding: 30px 0px 0px 120px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.7); }
+  footer > * {
+    margin-right: 30px; }
+  footer a {
+    color: rgba(0, 0, 0, 0.7);
+    opacity: 0.7; }
+    footer a:hover {
+      opacity: 1; }
+
+body {
+  font-family: Open Sans, sans-serif;
+  font-size: 14px; }
+
+/*# sourceMappingURL=style.css.map */

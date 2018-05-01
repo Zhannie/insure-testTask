@@ -1,0 +1,48 @@
+header {
+	height: 70px;
+	width: 100%;
+	box-shadow: 0px 1px 4px $shadow-color;
+	padding: 0px 120px;
+	@include flex(row, nowrap, start);
+
+	img {
+		margin: 28px 315px 28px 0px;
+	}
+
+	nav {
+		padding-top: 25px;
+
+		ul {
+			@include flex(row, nowrap, space-between);
+			height: 100%;
+
+			li {
+				margin-right: 19px;
+
+				a {
+					padding: 5px 10px;
+					display: block;
+					color: #1c1b1a;
+					text-align: center;
+					opacity: 0.5;
+					height: 100%;
+
+					&:hover {
+						opacity: 1;
+					}
+					&.active {
+						opacity: 1;
+						border-bottom: 2px solid #2985f7;
+					}
+				}
+			}
+		}
+		
+	}
+}
+
+
+
+
+
+

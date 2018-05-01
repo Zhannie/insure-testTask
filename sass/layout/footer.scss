@@ -1,0 +1,20 @@
+footer {
+	@include flex(row, nowrap, start);
+	height: 80px;
+	border: 1px solid rgba(28, 27, 26, 0.1);
+	border-radius: 2px;
+	padding: 30px 0px 0px 120px;
+	font-size: 12px;
+	color: $font-color;
+	& > * {
+		margin-right: 30px;
+	}
+
+	a {
+		color: $font-color;
+		opacity: 0.7;
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
