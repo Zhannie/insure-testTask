@@ -104,7 +104,8 @@ main {
       main section .item img {
         flex: 0 1 25%;
         margin-bottom: 18px;
-        max-width: 55px; }
+        max-width: 55px;
+        height: 55px; }
       main section .item .item-header {
         flex: 0 1 70%;
         padding: 7px 0px 0px 5px; }
