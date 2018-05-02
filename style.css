@@ -467,6 +467,7 @@ footer {
       main section .item {
         flex: 0 1 75%; }
         main section .item .item-header {
+          flex: 0 1 69%;
           padding: 8px 0px 0px 7px; }
           main section .item .item-header h3 {
             text-align: left; }
