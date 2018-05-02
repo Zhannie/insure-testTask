@@ -121,7 +121,9 @@
 @media #{$mediaxs} {
 	header {
 		justify-content: space-between;
-		padding: 0px calc((100% - 375px)/2);
+		max-width: 375px;
+		padding: 0px 30px;
+		margin: 0px auto;
 		img {
 			margin: 28px 0px 28px 0px;
 		}
@@ -143,7 +145,7 @@
 					z-index: 999!important;
 					position: absolute;
 					top: 50px;
-					right: 120px;
+					right: 20px;
 
 					li {
 						margin-right: 0px;

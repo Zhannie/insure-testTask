@@ -416,7 +416,9 @@ footer {
 @media screen and (max-width: 767px) {
   header {
     justify-content: space-between;
-    padding: 0px calc((100% - 375px)/2); }
+    max-width: 375px;
+    padding: 0px 30px;
+    margin: 0px auto; }
     header img {
       margin: 28px 0px 28px 0px; }
     header nav ul {
@@ -434,7 +436,7 @@ footer {
       z-index: 999 !important;
       position: absolute;
       top: 50px;
-      right: 120px; }
+      right: 20px; }
       header nav ul.mobile-menu.opened li {
         margin-right: 0px; }
     header nav .mobile-menu.mm-btn {
